@@ -12,6 +12,7 @@ class dB_Helper {
       return _db!;
     }
     _db = await initDatabase();
+    // return null;
   }
 
   initDatabase() async {
@@ -23,7 +24,7 @@ class dB_Helper {
 
   _onCreate(Database db, int version) async {
     await db.execute(
-      'CREATE TABLE cart (id INTEGER PRIMARY KEY , productId VARCHAR UNIQUE,productName TEXT,initialPrice INTEGER, productPrice INTEGER , quantity INTEGER, unitTag TEXT , image TEXT )',
+      'CREATE TABLE cart (id INTEGER PRIMARY KEY AUTOINCREMENT, productId VARCHAR ,productName TEXT, productPrice INTEGER , quantity INTEGER, unitTag TEXT , image TEXT )',
     );
   }
 
