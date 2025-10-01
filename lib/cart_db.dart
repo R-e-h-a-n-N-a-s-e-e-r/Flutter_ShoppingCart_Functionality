@@ -33,4 +33,33 @@ class dB_Helper {
     await dbClient!.insert('cart', cart.toMap());
     return cart;
   }
+
+  Future<List<Cart>> fetchCartList() async {
+    var dbClient = await db;
+    final List<Map<String, Object?>> queryResult = await dbClient!.query(
+      'cart',
+    );
+    return queryResult.map((e) => Cart.fromMap(e)).toList();
+  }
+
+  // Future<String> deleteItem(String id) async {
+  //   var dbClient = await db;
+  //   await dbClient?.delete(
+  //     'cart',
+  //     where: 'productId=?',
+  //     whereArgs: [id],
+  //   );
+  //   return 'deleted';
+  // }
+
+  Future<String> deleteItem(int id) async {
+    var dbClient = await db;
+    await dbClient?.delete(
+      'cart',
+      where: 'Id=?',
+      whereArgs: [id],
+    );
+    return 'deleted';
+  }
+
 }

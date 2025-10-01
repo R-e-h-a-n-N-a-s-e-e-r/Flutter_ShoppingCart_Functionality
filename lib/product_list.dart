@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:shopping_cart/cartProvider.dart';
 import 'package:shopping_cart/cart_db.dart';
 import 'package:shopping_cart/cart_model.dart';
+import 'package:shopping_cart/cart_screen.dart';
 
 class ProductList extends StatefulWidget {
   const ProductList({super.key});
@@ -51,20 +52,28 @@ class _ProductListState extends State<ProductList> {
         foregroundColor: Colors.white,
         backgroundColor: Colors.blue,
         actions: [
-          badges.Badge(
-            badgeContent: Consumer<CartProvider>(
-              builder: (context, value, child) {
-                return Text(
-                  value.getItemCount().toString(),
-                  style: TextStyle(color: Colors.white),
-                );
-              },
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CartScreen()),
+              );
+            },
+            child: badges.Badge(
+              badgeContent: Consumer<CartProvider>(
+                builder: (context, value, child) {
+                  return Text(
+                    value.getItemCount().toString(),
+                    style: TextStyle(color: Colors.white),
+                  );
+                },
+              ),
+              badgeStyle: badges.BadgeStyle(badgeColor: Colors.green),
+              badgeAnimation: badges.BadgeAnimation.slide(
+                animationDuration: Duration(milliseconds: 400),
+              ),
+              child: Icon(Icons.shopping_bag_outlined, color: Colors.white),
             ),
-            badgeStyle: badges.BadgeStyle(badgeColor: Colors.green),
-            badgeAnimation: badges.BadgeAnimation.slide(
-              animationDuration: Duration(milliseconds: 400),
-            ),
-            child: Icon(Icons.shopping_bag_outlined, color: Colors.white),
           ),
           SizedBox(width: 20),
         ],
