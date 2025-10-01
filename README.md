@@ -1,16 +1,21 @@
-# shopping_cart
+# Shopping Cart
 
-A new Flutter project.
+It is a simple cart fuctionality that involves sqflite , shared preferences and many other packages. 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+______________________________________________________________________________________________________________________________________________________________________________________________
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="351" height="623" alt="Flutter_practice_5 1" src="https://github.com/user-attachments/assets/fd50655a-4b92-434c-b129-d3fe82300718" />
+
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________
+
+
+<img width="348" height="625" alt="Flutter_practice_5 2 2" src="https://github.com/user-attachments/assets/40abf7c6-3032-4065-9b1b-f7ce28bd874a" />
+
+______________________________________________________________________________________________________________________________________________________________________________________________
+<img width="351" height="626" alt="Flutter_practice_5 3" src="https://github.com/user-attachments/assets/5c29b072-3180-4417-99ae-089e20f98a6f" />
